@@ -1,0 +1,18 @@
+<?php
+$conn=new mysqli("localhost","id12212591_info","abcde123","id12212591_iot");
+$y=$conn->query("SELECT * FROM Student");
+
+if ($y->num_rows > 0) {
+		while($row=$y->fetch_assoc()) {
+	# code...
+			echo "<table border=2px><tr><td>".$row["sname"]."</td><td>".$row["sfname"]."</td</tr></table>";
+}
+#echo"</table>";
+}
+	
+else
+{
+
+	echo "0 results";
+}
+?>
